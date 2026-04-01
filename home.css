@@ -351,12 +351,12 @@ nav a {
     .text1 {
         max-width: 100%; /* prevent overflow */
         text-align: left;
-        margin-top: 30px;
+        margin-top: 40px;
     }
 
     .title-text1 {
-        font-size: 34px;
-        padding-right: 50px;
+        font-size: 40px;
+        padding-right: 37px;
     }
 
     .sub-text-hero {
