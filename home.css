@@ -61,7 +61,8 @@ nav .logo {
 }
 
 nav a:hover {
-    color: green;
+    color: green;   
+    
 }
 
 .logo {
@@ -86,6 +87,37 @@ nav svg {
     margin-left: 30px;
 }
 
+nav a {
+    /* --- ADDED THESE THREE LINES --- */
+    position: relative;   /* This anchors the line to the link */
+    display: flex;        /* You already had this, keep it */
+    align-items: center;  /* You already had this, keep it */
+    
+    /* --- YOUR EXISTING STYLES --- */
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* --- THE UNDERLINE EFFECT (No changes needed here) --- */
+.text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Adjusted slightly so it's not at the very bottom of the 60px nav */
+    width: 0;
+    height: 2px;
+    background-color: #80ea66;
+    transition: width 0.3s ease;
+    z-index: 5;
+}
+
+.text:hover::after {
+    width: 100%;
+}
 
 @media(max-width: 533px) {
     .link-container{
@@ -159,7 +191,8 @@ nav svg {
 /*-------------------  HERO --------------------*/
 
 .hero {
-    display: flex;
+    display: grid;
+    
     align-items: center;
     height: 450px;
     background: linear-gradient(135deg, #fff 40%, #ffdd00 100%);
@@ -188,13 +221,14 @@ nav svg {
     grid-template-columns: 2fr 1fr; 
     width: 100%;
     max-width: 1100px;
-    margin: 0px 30px; /* Centers the content box */
+    margin: 30px auto; /* Centers the content box */
+    padding: 0 30px;
     gap: 50px;
 }
 
 .text-button {
     display: grid;
-    grid-row: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 30px;
 }
 
@@ -255,17 +289,15 @@ nav svg {
     background-clip: text;
 }
 
-.csu {
-    color: #ffdd00;
-}
-
-.csu2 {
-    color: rgb(17, 151, 17);
+.title-text1{
+    font-size: 50px;
 }
 
 .sub-text-hero {
     color: green;
 }
+
+
 
 .pic1 img {
     /* Ensures the image doesn't break out of the 300px container */
@@ -292,36 +324,51 @@ nav svg {
 
 @media(max-width: 533px) {
     .hero {
-        height: 650px;
+        height: 750px;
+    }
+
+    .custom-shape {
+        width: 100%;
+        left: 0;
+        transform: none;
     }
 
     .content {
         grid-template-columns: 1fr;
         text-align: center;
-        justify-items: center; /* center grid items */
+        justify-items: stretch; /* center grid items */
+        padding: 0 20px;
     }
 
     .text-button {
-        margin: 0 auto; /* center horizontally */
+        width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center; /* center children */
+        align-items: stretch; /* center children */
         text-align: center;
     }
 
     .text1 {
-        font-size: 39px;
         max-width: 100%; /* prevent overflow */
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .title-text1 {
+        font-size: 34px;
+        padding-right: 50px;
     }
 
     .sub-text-hero {
         font-size: 15px;
         max-width: 100%;
+        text-align: left;
+        padding-right: 40px;
     }
 
     .button-hero {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 10px;
     }
 
