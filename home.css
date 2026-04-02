@@ -228,7 +228,6 @@ nav a {
 
 .text-button {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 30px;
 }
 
@@ -295,6 +294,7 @@ nav a {
 
 .sub-text-hero {
     color: green;
+    
 }
 
 
@@ -328,10 +328,17 @@ nav a {
     }
 
     .custom-shape {
-        width: 100%;
-        left: 0;
-        transform: none;
-    }
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 533px;
+  height: 750px;
+  background-color: #eeeeee;
+  /* Adjusted coordinates to match 533px width and 750px height */
+  clip-path: path("M 0,0 L 0,0 Q 500,0 460,100 L 460,650 Q 465,750 345,746 L 0,746 Z");
+  z-index: 0;
+}
 
     .content {
         grid-template-columns: 1fr;
@@ -356,7 +363,7 @@ nav a {
 
     .title-text1 {
         font-size: 40px;
-        padding-right: 37px;
+        padding-right: 39px;
     }
 
     .sub-text-hero {
@@ -366,6 +373,10 @@ nav a {
         padding-right: 40px;
     }
 
+    .sub-text-hero-1 {
+        margin-right: 30px;
+    }
+
     .button-hero {
         display: flex;
         justify-content: flex-start;
@@ -373,12 +384,12 @@ nav a {
     }
 
     .pic1 {
-        margin: 0 auto;
+        margin: 0 55px;
         width: 200px;
     }
 
     .asa-parners {
-        justify-items: center; /* center partners */
+        justify-items: left; /* center partners */
         text-align: center;
     }
 
