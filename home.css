@@ -334,7 +334,7 @@ nav a {
   transform: translateX(-50%);
   width: 533px;
   height: 750px;
-  background-color: white;
+  background-color: #eeeeee;
   /* Adjusted coordinates to match 533px width and 750px height */
   clip-path: path("M 0,0 L 0,0 Q 500,0 460,100 L 460,650 Q 465,750 345,746 L 0,746 Z");
   z-index: 0;
