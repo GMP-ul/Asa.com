@@ -918,8 +918,10 @@ nav a {
             }
 
             .mag-glass-graphic {
-                width: 250px;
-                transform: translate(-10%, -5%);
+                width: 450px;
+                height: 200px;
+                object-fit: cover;
+                transform: (-10%, -5%);
             }
 
             .content-side {
@@ -1071,17 +1073,31 @@ nav a {
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .footer-top {
-                flex-direction: column;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                gap: 15px;
-                align-items: flex-start;
-            }
-            .legal-links {
-                gap: 15px;
-                flex-wrap: wrap;
-            }
-        }
+@media (max-width: 768px) {
+    .footer-container {
+        margin: 40px 20px; /* Pulls footer up so it's visible sooner */
+    }
+
+    .footer-top {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    .footer-column {
+        min-width: 100%;
+        margin-bottom: 25px;
+        text-align: left; /* Keep left aligned or use 'center' if you prefer */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        padding-bottom: 40px; /* Extra space at the very bottom */
+    }
+
+    .legal-links {
+        flex-direction: column; /* Stack legal links for better readability */
+        gap: 10px;
+    }
+}
