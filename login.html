@@ -3,45 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>PAGEGRID | Log In</title>
     <link rel="stylesheet" href="login.css">
-    <link rel="icon" href="logo-asa-top.png">
 </head>
 <body>
-    <div class="login-container">
+    <main class="login-container">
         <div class="login-card">
-            <h2>LOGIN</h2>
-            
+            <header class="logo">
+                <img src="final logo 1.png" alt="PAGEGRID Logo" class="logo-img">
+            </header>
+
+            <h1>Welcome Back</h1>
+            <p class="subtitle">Please enter your details to sign in.</p>
+
             <form>
                 <div class="input-group">
-                    <input type="email" placeholder="Email Address" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <div class="input-group">
+                        <select id="role" required>
+                            <option value="" disabled selected>Select your Role</option>
+                            <option value="student">Student</option>
+                            <option value="staff">Staff</option>
+                            <option value="admin">Admin</option>
+                            <option value="visitor">Visitor</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <input type="password" placeholder="Password" required>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
                 </div>
-                
-                <button type="submit" class="login-btn">LOGIN</button>
+
+                <button type="submit" class="btn-submit">LOG IN</button>
             </form>
 
-            <div class="separator">
-                <span>or Sign-Up with</span>
-            </div>
-
-            <div class="social-icons">
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-            </div>
-
-            <p class="terms">
-                By creating an account you agree to our <br>
-                <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
-            </p>
-
-            <p class="footer-text">
-                Don't have an account? <a href="#">Sign-Up</a>
-            </p>
+            <footer class="links">
+                <p>Don't have an account? <a href="create_acc.html"><strong>Create Account</strong></a></p>
+            </footer>
         </div>
-    </div>
+    </main>
 </body>
 </html>
